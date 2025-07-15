@@ -27,3 +27,27 @@ classDiagram
     Person <|-- Student
     Person <|-- Teacher
 ```
+
+## Inventory Module UML Diagram
+
+```mermaid
+classDiagram
+    class Item {
+        +string Name
+        +int Quantity
+        +double Price
+        +string Id
+        +void UpdateQuantity(int)
+        +double GetTotalValue()
+        +string ToString()
+    }
+    class Inventory {
+        +ArrayList Items
+        +string InventoryName
+        +void AddItem(Item)
+        +void RemoveItem(string)
+        +double GetTotalInventoryValue()
+        +string ToString()
+    }
+    Inventory "1" o-- "*" Item
+```
